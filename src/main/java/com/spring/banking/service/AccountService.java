@@ -3,6 +3,7 @@ package com.spring.banking.service;
 import java.util.List;
 
 import com.spring.banking.dto.AccountDto;
+import com.spring.banking.dto.TransactionDto;
 import com.spring.banking.dto.TransferFundDto;
 
 public interface AccountService {
@@ -20,4 +21,6 @@ public interface AccountService {
 	void deleteAccount(Long id);
 	
 	void transferFunds(TransferFundDto transferFundDto);
+	
+	List<TransactionDto> getAccountTransaction(Long accountId);
 }
